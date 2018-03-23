@@ -9,10 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customer home page</title>
+        <title>Order your house</title>
     </head>
     <body>
-        <h1>Hello <%=request.getParameter( "email" )%> </h1>
-        You are now logged in as a customer of our wonderful site.
+        <h1>Hi, <%=request.getParameter("email")%></h1>
+        <p>What dimensions do you want for your legohouse?</p>
+        <form name="orderpage" action="FrontController" method="POST">
+            <input type="hidden" name="command" value="orderpage">
+            <p> Enter width and height. Measurement is in dots</p>
+            <input type="number" min="8" max="5000" name="length" placeholder="Insert length">
+            <input type="number" min="8" max="5000" name="width" placeholder="Insert width">
+            <input type="number" min="6" max="2500" name="height" placeholder="Insert height">
+            <br><input type="submit" value="Continue">
+        </form>
     </body>
 </html>

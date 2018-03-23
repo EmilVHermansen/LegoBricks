@@ -12,8 +12,8 @@
         <title>Welcome page</title>
     </head>
     <body>
-        <h1>Welcome to Sem 2</h1>
-        
+        <h1>Welcome to Lego build-a-boxhouse</h1>
+
         <table>
             <tr><td>Login</td>
                 <td>
@@ -46,11 +46,11 @@
                 </td>
             </tr>
         </table>
-        <% String error = (String) request.getAttribute( "error");
-           if ( error != null) { %>
-           <H2>Error!!</h2>
-           <p><%= error %>
-        <% }
-        %>
+        <% String error = (String) request.getAttribute("error");
+            if (error != null) {%>
+        <H2>Error!!</h2>
+        <p><%= error%>
+            <% }
+            %>
     </body>
 </html>
