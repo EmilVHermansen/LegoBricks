@@ -18,7 +18,7 @@
         <h1>Order history</h1>
         <div>
             <%for (Order order : orders) {
-            out.println(order);%>
+                    out.println(order);%>
             <br> <br>
             <%};%>
 

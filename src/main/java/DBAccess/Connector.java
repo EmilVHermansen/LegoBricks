@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class Connector {
 
     private static final String URL = "jdbc:mysql://46.101.158.228:3306/LegoBricks";

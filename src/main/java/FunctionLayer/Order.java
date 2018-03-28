@@ -27,7 +27,7 @@ public class Order {
     public ArrayList<Brick> getBricks() {
         return bricks;
     }
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
@@ -55,7 +55,7 @@ public class Order {
     public int getUserId() {
         return userId;
     }
-    
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -69,5 +69,5 @@ public class Order {
         String str = sb.toString();
         return str;
     }
-    
+
 }

@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-
 public class DataAccessObject {
 
     public static void createUser(User user) throws LoginSampleException {
@@ -59,7 +58,7 @@ public class DataAccessObject {
 
     public static ArrayList<Order> getOrders(int userId) throws OrderException {
         try {
-             Connection con = Connector.connection();
+            Connection con = Connector.connection();
             String SQL = "SELECT * FROM `Order` WHERE User_idUser = ?";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, userId);
@@ -68,8 +67,7 @@ public class DataAccessObject {
             ResultSet rs = null;
             rs = ps.executeQuery();
 
-            while (rs.next())
-            {
+            while (rs.next()) {
                 int id = rs.getInt("idOrder");
                 int length = rs.getInt("length");
                 int width = rs.getInt("width");
@@ -81,8 +79,7 @@ public class DataAccessObject {
                 orders.add(order);
             }
             return orders;
-        } catch (SQLException | ClassNotFoundException ex)
-        {
+        } catch (SQLException | ClassNotFoundException ex) {
             throw new OrderException(ex.getMessage());
         }
     }

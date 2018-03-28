@@ -1,6 +1,4 @@
-
 package FunctionLayer;
-
 
 public class Brick {
 
@@ -31,7 +29,5 @@ public class Brick {
                 return qty + " pcs. of: 2x" + length + " [::]";
         }
     }
-
-   
 
 }
