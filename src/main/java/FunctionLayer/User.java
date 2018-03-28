@@ -1,10 +1,5 @@
 package FunctionLayer;
 
-/**
- * The purpose of User is to...
- *
- * @author kasper
- */
 public class User {
 
     public User(String email, String password, String role) {
@@ -13,9 +8,9 @@ public class User {
         this.role = role;
     }
 
-    private int id; // just used to demo retrieval of autogen keys in UserMapper
+    private int id;
     private String email;
-    private String password; // Should be hashed and all
+    private String password; 
     private String role;
 
     public String getEmail() {

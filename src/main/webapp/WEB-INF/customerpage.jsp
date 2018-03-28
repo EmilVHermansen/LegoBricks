@@ -1,10 +1,7 @@
-<%-- 
-    Document   : customerpage
-    Created on : Aug 22, 2017, 2:33:37 PM
-    Author     : kasper
---%>
 
+<%@page import="FunctionLayer.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% User user = (User) session.getAttribute("user");%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +9,7 @@
         <title>Order your house</title>
     </head>
     <body>
-        <h1>Hi, <%=request.getParameter("email")%></h1>
+        <h1>Hi, <% out.println(user.getEmail());%> </h1>
         <p>What dimensions do you want for your legohouse?</p>
         <form name="orderpage" action="FrontController" method="POST">
             <input type="hidden" name="command" value="orderpage">
@@ -22,5 +19,7 @@
             <input type="number" min="6" max="2500" name="height" placeholder="Insert height">
             <br><input type="submit" value="Continue">
         </form>
+        <p> Or if you would like to see your previous orders, <a href="FrontController?command=orderhistory">press here</a></p>
+
     </body>
 </html>

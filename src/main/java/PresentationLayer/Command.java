@@ -15,6 +15,7 @@ abstract class Command {
         commands.put("login", new Login());
         commands.put("register", new Register());
         commands.put("orderpage", new OrderPage());
+        commands.put("orderhistory", new OrderHistory());
     }
 
     static Command from(HttpServletRequest request) {
@@ -26,7 +27,7 @@ abstract class Command {
     }
 
     abstract String execute(HttpServletRequest request, HttpServletResponse response)
-            throws LoginSampleException;
+            throws LoginSampleException, OrderException;
             
 
 }
