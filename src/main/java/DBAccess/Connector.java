@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Connector {
 
-    private static final String URL = "jdbc:mysql://46.101.158.228:3306/LegoBricks";
+    private static final String URL = "jdbc:mysql://46.101.158.228:3306/LegoBricks?autoReconnect=true";
     private static final String USERNAME = "testuser";
     private static final String PASSWORD = "password123";
 
